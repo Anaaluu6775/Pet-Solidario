@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Nova entidade · Pet solidário</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fredoka:wght@500;600&family=Nunito:wght@400;600;700&display=swap" rel="stylesheet">
+<link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
+</head>
+<body data-page="cadastro">
+<div class="content">
+<aside>
+  <img src="assets/hero.svg" alt="">
+  <h1>Pet solidário</h1>
+  <p>Conectando quem cuida dos animais.</p>
+</aside>
+<main>
+<header><a class="back" href="index.html" aria-label="Voltar"><i class="fas fa-angle-left"></i></a><h2>Nova entidade</h2></header>
+<form id="form-entidade" novalidate>
+  <label for="input-name">Nome</label>
+  <input type="text" id="input-name" placeholder="Ex.: Pet Lar" autocomplete="off">
+  <small class="erro" id="erro-name"></small>
+
+  <label for="select-field">Campo de atuação</label>
+<div class="select-div">
+  <select id="select-field">
+    <option value="">Selecione uma opção</option>
+    <option value="Abrigo de animais">Abrigo de animais</option>
+    <option value="Adoção de animais">Adoção de animais</option>
+    <option value="Resgate">Resgate</option>
+    <option value="Proteção">Proteção</option>
+  </select>
+</div>
+<small class="erro" id="erro-field"></small>
+
+  <label for="input-points">Pontos de coleta</label>
+  <div class="points">
+    <input type="text" id="input-points" placeholder="Endereço ou local" autocomplete="off">
+    <button type="button" id="add-point" aria-label="Adicionar ponto"><i class="fa-solid fa-circle-plus"></i></button>
+  </div>
+  <ul class="chips" id="chips"></ul>
+
+  <button class="btn btn-primary" type="submit">Cadastrar</button>
+</form>
+</main>
+</div>
+<div id="toast" role="status" aria-live="polite"></div>
+<script src="app.js"></script>
+</body>
+</html>

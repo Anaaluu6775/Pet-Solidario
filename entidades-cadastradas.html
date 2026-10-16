@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Entidades cadastradas · Pet solidário</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fredoka:wght@500;600&family=Nunito:wght@400;600;700&display=swap" rel="stylesheet">
+<link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
+</head>
+<body data-page="lista">
+<div class="content">
+<aside>
+  <img src="assets/hero.svg" alt="">
+  <h1>Pet solidário</h1>
+  <p>Conectando quem cuida dos animais.</p>
+</aside>
+<main>
+<header><a class="back" href="index.html" aria-label="Voltar"><i class="fas fa-angle-left"></i></a><h2>Entidades cadastradas</h2></header>
+<div class="filtro">
+  <label for="select-field">Filtrar por campo</label>
+  <div class="select-div">
+    <select id="select-field">
+      <option value="">Todos os campos</option>
+      <option value="Abrigo de animais">Abrigo de animais</option>
+      <option value="Adoção de animais">Adoção de animais</option>
+      <option value="Resgate">Resgate</option>
+      <option value="Proteção">Proteção</option>
+    </select>
+  </div>
+<ul class="lista" id="lista"></ul>
+<dialog id="dialog"></dialog>
+</main>
+</div>
+<div id="toast" role="status" aria-live="polite"></div>
+<script src="app.js"></script>
+</body>
+</html>
